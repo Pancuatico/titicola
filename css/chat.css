@@ -1,0 +1,43 @@
+/* General sizes */
+html,body,.mainContainer{
+  height: 100% !important;
+}
+.rowChat{
+  height: calc(100% - 61px);
+}
+.chatBody{
+  height: 100%;
+  border: 1px solid rgb(230,230,230);
+}
+
+/* Administradores */
+
+.admCircle{
+  display:block;
+  width: 46px;
+  height: 46px;
+  background-color: rgb(184, 184, 184);
+  border-radius: 23px;
+  margin-top: 2px;
+}
+.admName h5{
+  margin-bottom: 2px;
+}
+
+/* Lista de usuarios */
+.chatUsers{
+  padding-right: 3px;
+}
+.chatHead{
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 24px;
+}
+.chatUser{
+  padding-left: 3px;
+  padding-bottom: 3px;
+}
+.chatUser > div{
+  border: 1px solid rgb(206, 206, 206);
+  padding: 4px;
+}
