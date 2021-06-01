@@ -26,7 +26,7 @@
       <div class="table-responsive">
         <table class="table table-bordered">
           <thead>
-            <tr><th>Usuario</th><th>Elemento</th><th>Entidad</th><th>Momento</th></tr>
+            <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
           </thead>
           <tbody>
 

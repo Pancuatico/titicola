@@ -20,18 +20,18 @@
             <h5 class="card-title text-center">Sign In</h5>
             <form class="form-signin">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputEmail">Email</label>
+                <input type="email" id="inputEmail" name="correo" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Correo</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" name="clave" class="form-control" placeholder="Password" required>
                 <label for="inputPassword">Clave</label>
               </div>
 
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Recordar password</label>
+                <label class="custom-control-label" for="customCheck1">Recordar clave</label>
               </div>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
               <hr class="my-4">
