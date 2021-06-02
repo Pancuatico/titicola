@@ -14,7 +14,8 @@
   <link href="../../css/tracking.css" rel="stylesheet">
 </head>
 <body>
-
+<!-- blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup
+mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error -->
 <div class="container">
   <div class="row rowPestanas">
     <div class="col-4 pestana">Clicks</div>
@@ -24,7 +25,7 @@
   <div class="row rowClicks">
     <div class="col-12">
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered tableClicks">
           <thead>
             <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
           </thead>
@@ -38,7 +39,7 @@
   <div class="row rowLogIO">
     <div class="col-12">
       <div class="table-responsive table-bordered">
-        <table class="table">
+        <table class="table tableLogIO">
           <thead>
             <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
           </thead>
@@ -50,7 +51,7 @@
   <div class="row rowOthers">
     <div class="col-12">
       <div class="table-responsive table-bordered">
-        <table class="table">
+        <table class="table tableOthers">
           <thead>
             <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
           </thead>

@@ -1,6 +1,6 @@
 <?php
 try {
-	$dbname = "db_name";
+	$dbname = "forusers";
 	$dbuser = 'root';
 	$dbpass = '';
 	$params = 'mysql:host=localhost;dbname='.$dbname.';charset=utf8';
