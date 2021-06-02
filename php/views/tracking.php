@@ -18,14 +18,14 @@
 mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error -->
 <div class="container">
   <div class="row rowPestanas">
-    <div class="col-4 pestana">Clicks</div>
-    <div class="col-4 pestana">Login / Logout</div>
-    <div class="col-4 pestana">Others</div>
+    <div class="col-4 pestana pestana1 pestanaSelected"><div>Clicks</div></div>
+    <div class="col-4 pestana pestana2"><div>Login / Logout</div></div>
+    <div class="col-4 pestana pestana3"><div>Others</div></div>
   </div>
   <div class="row rowClicks">
     <div class="col-12">
       <div class="table-responsive">
-        <table class="table table-bordered tableClicks">
+        <table class="table table-bordered tableClicks table-sm">
           <thead>
             <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
           </thead>
@@ -36,7 +36,7 @@ mousemove mouseover mouseout mouseenter mouseleave change select submit keydown 
       </div>
     </div>
   </div>
-  <div class="row rowLogIO">
+  <div class="row rowLogIO" style="display:none">
     <div class="col-12">
       <div class="table-responsive table-bordered">
         <table class="table tableLogIO">
@@ -48,7 +48,7 @@ mousemove mouseover mouseout mouseenter mouseleave change select submit keydown 
       </div>
     </div>
   </div>
-  <div class="row rowOthers">
+  <div class="row rowOthers" style="display:none">
     <div class="col-12">
       <div class="table-responsive table-bordered">
         <table class="table tableOthers">
@@ -73,7 +73,10 @@ mousemove mouseover mouseout mouseenter mouseleave change select submit keydown 
 <script src="../../libs/DataTables/vfs_fonts.js" type="text/javascript"></script>
 <script src="../../libs/DataTables/buttons.html5.min.js" type="text/javascript"></script>
 <script src="../../libs/DataTables/dataTables.fixedHeader.min.js" type="text/javascript"></script>
-<script src="../../js/commons.js" type="text/javascript"></script>										              <!-- common settings and tooltips-->
-<script src="../../js/tracking.js" type="text/javascript"></script>										                <!-- custom -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script> <!-- Firebase realtime database -->
+<script src="../../js/commons.js" type="text/javascript"></script>								    <!-- common settings and tooltips-->
+<script src="../../js/firebaseIni.js" type="text/javascript"></script>						    <!-- custom -->
+<script src="../../js/tracking.js" type="text/javascript"></script>							      <!-- custom -->
 </body>
 </html>

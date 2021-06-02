@@ -123,8 +123,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>      <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script> <!-- Firebase realtime database -->
 <script src="../../js/commons.js" type="text/javascript"></script>								    <!-- common settings and tooltips-->
-<script src="../../js/chat/listen.js" type="text/javascript"></script>						    <!-- custom -->
-<script src="../../js/chat/write.js" type="text/javascript"></script>						      <!-- custom -->
+<script src="../../js/firebaseIni.js" type="text/javascript"></script>						    <!-- custom -->
+<script src="../../js/chat.js" type="text/javascript"></script>						      <!-- custom -->
 
 </body>
 </html>

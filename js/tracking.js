@@ -1,12 +1,46 @@
 //Escuchar: blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup
 //mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error
+
+//Eventos de inicio
 $(document).ready(function(){
-  loadTracking();
+  //loadTracking();
 });
 
+//Globals
+const streaming = proy1.child('streaming');
+
+//Firebase events
+proy1.on('child_changed',snap => {      //child_changed ocurre solo cuando hay cambios
+  console.log("A child changed to: ");
+  console.log(snap.val());
+});
+
+streaming.on('value',snap => {              //value ocurre una vez inicialmente y también cuando hay cambios
+  console.log("Pomped value:");
+  console.log(snap.val());
+  loadTracking();           //Esto hará cargar de inicio el loadTracking y además cuando hayan cambios en firebase
+});
+
+
+//Functions
 function loadTracking(){
-  $.post("../php/requests/tracking/get_todo.php",function(data){
-    console.log(data);
+  $.ajax({
+    url:"../requests/tracking/get_todo.php",
+    type: "post",
+    dataType: "json",
+    success: function(datos){
+      //console.log(datos);
+      var trs = "";
+      for(var i in datos){
+        console.log(datos[i]);
+        trs += "<tr class='trClick'>";
+        trs += "<td class='tdUser'>"+datos[i]["nombres"]+" "+datos[i]["apellido1"]+"</td>";
+        trs += "<td class='tdEvent'>"+datos[i]["evento"]+"</td>";
+        trs += "<td class='tdMoment'>"+datos[i]["momento"]+"</td>";
+        trs += "</tr>";
+      }
+      $(".tableClicks tbody").html(trs);
+    }
   });
 }
 

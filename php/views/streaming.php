@@ -18,7 +18,10 @@
 <script src="../../libs/jQuery-3.4.1.min.js" type="text/javascript"></script>							          <!-- jQuery -->
 <script src="../../libs/popper/popper-1.16.min.js" type="text/javascript"></script>				          <!-- Popper -->
 <script src="../../libs/bootstrap-4.5.0-dist/js/bootstrap.min.js" type="text/javascript"></script>	<!-- Bootstrap4 -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>               <!-- Firebase realtime database -->
 <script src="../../js/commons.js" type="text/javascript"></script>										              <!-- common settings and tooltips-->
-<script src="../../js/streaming.js" type="text/javascript"></script>										                <!-- custom -->
+<script src="../../js/firebaseIni.js" type="text/javascript"></script>						                  <!-- custom -->
+<script src="../../js/streaming.js" type="text/javascript"></script>										            <!-- custom -->
 </body>
 </html>
