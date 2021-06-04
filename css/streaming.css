@@ -1,0 +1,7 @@
+#btn1,#btn2,#btn3{
+    display: none;
+    margin: 8px 16px;
+}
+.makeAsk,.rmAsk{
+    margin-top: 300px;
+}

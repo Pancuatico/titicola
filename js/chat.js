@@ -8,22 +8,36 @@ const chats = proy1.child('chats');
 const room = chats.child('room');
 
 //Firebase events
-proy1.on('child_changed',snap => {      //child_changed ocurre solo cuando hay cambios
-  console.log("A child changed to: ");
-  console.log(snap.val());
-});
 
-chats.on('value',snap => {              //value ocurre una vez inicialmente y también cuando hay cambios
-  console.log("Pomped value:");
+room.on('value',snap => {              //value ocurre una vez inicialmente y tambiÃ©n cuando hay cambios
+  console.log("Chat value:");
   console.log(snap.val());
-});
-
-room.on('child_changed',snap => {
-  console.log("A child changed to: ");
-  console.log(snap.val());
+  get_chatRoom();
 });
 
 //functions
-function generalMessage(txt){
-  $.post("");
+function generalMessage(texto){
+  if(texto!=""){
+    $("#chatRoomInput").val("");
+    $.post("../requests/chat/set_roomMsg.php",{texto:texto},function(data){
+      console.log(data);
+      chats.update({'room': Math.floor(Math.random() * (9999 - 999 + 1)) + 999});  //updateo el chat de firebase para que se actualice la tabla de tracking
+    });
+  }
+}
+
+function get_chatRoom(){
+  $.post("../requests/chat/get_chatRoom.php",function(data){
+    console.log(data);
+    var datos = JSON.parse(data);
+    var msgs = "";
+    for(var i in datos){
+      msgs += "<div class='row aMsg'>";
+        msgs += "<div class='col'>";
+          msgs += "<span class='txtMsg'>"+datos[i]["texto"]+"</span>";
+        msgs += "</div>";
+      msgs += "</div>";
+    }
+    $(".chatRoomBody>div").html(msgs);
+  });
 }

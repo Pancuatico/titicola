@@ -27,7 +27,7 @@ mousemove mouseover mouseout mouseenter mouseleave change select submit keydown 
       <div class="table-responsive">
         <table class="table table-bordered tableClicks table-sm">
           <thead>
-            <tr><th>Usuario</th><th>Evento</th><th>Momento</th></tr>
+            <tr><th>Usuario</th><th>Click en</th><th>Momento</th></tr>
           </thead>
           <tbody>
 

@@ -26,7 +26,7 @@ html,body,.mainContainer{
 
 /* Lista de usuarios */
 .chatUsers{
-  padding-right: 3px;
+  
 }
 .chatHead{
   padding-top: 14px;
@@ -48,4 +48,14 @@ html,body,.mainContainer{
 }
 .chatRoomFooter{
   height: 44px;
+}
+.aMsg{
+  border: 1px solid rgb(37, 135, 214);
+  background-color:rgb(116, 177, 228);
+  border-radius: 3px;
+}
+.txtMsg{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 4px 8px;
 }

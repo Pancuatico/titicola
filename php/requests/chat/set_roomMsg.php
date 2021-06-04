@@ -1,11 +1,12 @@
 <?php
 session_start();
 include "../../connect/db_connection.php";
-$msg = $_POST["msg"];
-$sql = "INSERT INTO chat_room (id_user,texto) VALUES (:iduser, :texto)";
-$pone = $db->prepare($sql);
-$pone->bindValue(":iduser",$_SESSION["userID"],PDO::PARAM_INT);
-$pone->bindValue(":texto",$texto,PDO::PARAM_INT);
-$pone->execute();
+$texto = $_POST["texto"];
+$iduser = 1;
+$pone = $db->prepare("INSERT INTO chat_room (id_user,texto) VALUES (:iduser, :texto)");
+$pone->bindValue(":iduser",$iduser,PDO::PARAM_INT);
+$pone->bindValue(":texto",$texto,PDO::PARAM_STR);
+if($pone->execute()) echo 1;
+else echo "No se pudo ejecutar la sentencia sql";
 
 ?>

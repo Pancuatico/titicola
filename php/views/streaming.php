@@ -11,8 +11,18 @@
   <link href="../../css/streaming.css" rel="stylesheet">
 </head>
 <body>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-info" id="btn1">Opción 1</button><button class="btn btn-success" id="btn2">Opción 2</button><button class="btn btn-warning" id="btn3">Opción 3</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-light makeAsk">Lanzar pregunta</button>
+    <button class="btn btn-light rmAsk">Quitar pregunta</button>
+  </div>
+</div>
 
-<button class="btn btn-info" id="btn1">Opción 1</button><button class="btn btn-success" id="btn2">Opción 2</button><button class="btn btn-warning" id="btn3">Opción 3</button>
 
 <!-- Scripts -->
 <script src="../../libs/jQuery-3.4.1.min.js" type="text/javascript"></script>							          <!-- jQuery -->

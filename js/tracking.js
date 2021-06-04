@@ -15,10 +15,10 @@ proy1.on('child_changed',snap => {      //child_changed ocurre solo cuando hay c
   console.log(snap.val());
 });
 
-streaming.on('value',snap => {              //value ocurre una vez inicialmente y también cuando hay cambios
+streaming.on('value',snap => {              //value ocurre una vez inicialmente y tambiÃ©n cuando hay cambios
   console.log("Pomped value:");
   console.log(snap.val());
-  loadTracking();           //Esto hará cargar de inicio el loadTracking y además cuando hayan cambios en firebase
+  loadTracking();           //Esto harÃ¡ cargar de inicio el loadTracking y ademÃ¡s cuando hayan cambios en firebase
 });
 
 
@@ -44,7 +44,7 @@ function loadTracking(){
   });
 }
 
-function trickToFilterLatinDate(){    //Permite que datatables filtre bien las fechas latinas. Se aplica después de set_dataTables()
+function trickToFilterLatinDate(){    //Permite que datatables filtre bien las fechas latinas. Se aplica despuÃ©s de set_dataTables()
   jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "date-uk-pre": function ( a ) {
       var ukDatea = a.split('/');
@@ -60,14 +60,14 @@ function trickToFilterLatinDate(){    //Permite que datatables filtre bien las f
     }
   } );
 }
-function putBtnExcel(){   //añade al datatables un botón para descargar excel custom
+function putBtnExcel(){   //aï¿½ade al datatables un botÃ³n para descargar excel custom
   var btnExcel = '<button class="btn btn-success btnExcel" tabindex="0" aria-controls="pagos" type="button"><span>Excel</span></button>';
   //$("#pagos_wrapper .dt-buttons").append(btnExcel);
 }
-function set_dataTables(){        //Aplica datatables. Esta función debe aplicarse después de cargar y mostrar los datos de las tablas
-  $('.tableClicks thead tr').clone(true).appendTo( '.tableClicks thead' );    //Se crea una copia del tr del thead y se añade al thead
-  $('.tableLogIO thead tr').clone(true).appendTo( '.tableLogIO thead' );      //Se crea una copia del tr del thead y se añade al thead
-  $('.tableOthers thead tr').clone(true).appendTo( '.tableOthers thead' );    //Se crea una copia del tr del thead y se añade al thead
+function set_dataTables(){        //Aplica datatables. Esta funciÃ³n debe aplicarse despuÃ©s de cargar y mostrar los datos de las tablas
+  $('.tableClicks thead tr').clone(true).appendTo( '.tableClicks thead' );    //Se crea una copia del tr del thead y se aï¿½ade al thead
+  $('.tableLogIO thead tr').clone(true).appendTo( '.tableLogIO thead' );      //Se crea una copia del tr del thead y se aï¿½ade al thead
+  $('.tableOthers thead tr').clone(true).appendTo( '.tableOthers thead' );    //Se crea una copia del tr del thead y se aï¿½ade al thead
   $('.tableClicks thead tr:eq(1) th, .tableLogIO thead tr:eq(1) th, .tableOthers thead tr:eq(1) th').each( function (i) {   //por cada th del tr copiado del thead
     var title = $(this).text();
     $(this).html( '<input type="text" placeholder="Buscar '+title+'" />' );   //reemplazo el nombre de columna por un input con placeholder indicativo
@@ -77,7 +77,7 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
       }
     });
   });
-  var table = $('#pagos').DataTable({   //Asegurar que el excel exportado se vea correctamente, investigar si se pueden añadir datos a lo importado.
+  var table = $('#pagos').DataTable({   //Asegurar que el excel exportado se vea correctamente, investigar si se pueden aÃ±adir datos a lo importado.
     orderCellsTop: true,
     fixedHeader: true,
     paging: false,
@@ -91,14 +91,14 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
     "aoColumns": [
       null,
       null,
-      { "sType": "date-uk" }    //Filtramos formato dd/mm/yyyy en la columna de fecha pago, esto gracias a función trickToFilterLatinDate()
+      { "sType": "date-uk" }    //Filtramos formato dd/mm/yyyy en la columna de fecha pago, esto gracias a funciÃ©n trickToFilterLatinDate()
     ],
-    "order": [],                //Evitamos que se ordene según la primera columna de la tabla
+    "order": [],                //Evitamos que se ordene segÃºn la primera columna de la tabla
     language: {
       "processing": "Procesando...",
       "lengthMenu": "Mostrar _MENU_ registros",
       "zeroRecords": "No se encontraron resultados",
-      "emptyTable": "Ningún dato disponible en esta tabla",
+      "emptyTable": "Ningï¿½n dato disponible en esta tabla",
       "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
       "infoFiltered": "(filtrado de un total de <span class='infoMax'>_MAX_</span> registros)",
       "search": "",
@@ -107,7 +107,7 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
       "loadingRecords": "Cargando...",
       "paginate": {
         "first": "Primero",
-        "last": "Último",
+        "last": "ï¿½ltimo",
         "next": "Siguiente",
         "previous": "Anterior"
       },
@@ -118,7 +118,7 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
       "buttons": {
         "copy": "Copiar",
         "colvis": "Visibilidad",
-        "collection": "Colección",
+        "collection": "ColecciÃ³n",
         "colvisRestore": "Restaurar visibilidad",
         "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
         "copySuccess": {
@@ -144,19 +144,19 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
       },
       "decimal": ",", //ESTO PERMITE FILTRAR FORMATO MONEDA $1.111
       "searchBuilder": {
-        "add": "Añadir condición",
+        "add": "AÃ±adir condiciÃ³n",
         "button": {
-            "0": "Constructor de búsqueda",
-            "_": "Constructor de búsqueda (%d)"
+            "0": "Constructor de bÃºsqueda",
+            "_": "Constructor de bÃºsqueda (%d)"
         },
         "clearAll": "Borrar todo",
-        "condition": "Condición",
+        "condition": "CondiciÃ³n",
         "conditions": {
           "date": {
             "after": "Despues",
             "before": "Antes",
             "between": "Entre",
-            "empty": "Vacío",
+            "empty": "VacÃ­o",
             "equals": "Igual a",
             "notBetween": "No entre",
             "notEmpty": "No Vacio",
@@ -171,12 +171,12 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
             "lt": "Menor que",
             "lte": "Menor o igual que",
             "notBetween": "No entre",
-            "notEmpty": "No vacío",
+            "notEmpty": "No vacÃ­o",
             "not": "Diferente de"
           },
           "string": {
             "contains": "Contiene",
-            "empty": "Vacío",
+            "empty": "VacÃ­o",
             "endsWith": "Termina en",
             "equals": "Igual a",
             "notEmpty": "No Vacio",
@@ -186,9 +186,9 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
           "array": {
             "not": "Diferente de",
             "equals": "Igual",
-            "empty": "Vacío",
+            "empty": "VacÃ­o",
             "contains": "Contiene",
-            "notEmpty": "No Vacío",
+            "notEmpty": "No VacÃ­o",
             "without": "Sin"
           }
         },
@@ -197,23 +197,23 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
         "leftTitle": "Criterios anulados",
         "logicAnd": "Y",
         "logicOr": "O",
-        "rightTitle": "Criterios de sangría",
+        "rightTitle": "Criterios de sangrï¿½a",
         "title": {
-          "0": "Constructor de búsqueda",
-          "_": "Constructor de búsqueda (%d)"
+          "0": "Constructor de bï¿½squeda",
+          "_": "Constructor de bï¿½squeda (%d)"
         },
         "value": "Valor"
       },
       "searchPanes": {
         "clearMessage": "Borrar todo",
         "collapse": {
-          "0": "Paneles de búsqueda",
-          "_": "Paneles de búsqueda (%d)"
+          "0": "Paneles de bï¿½squeda",
+          "_": "Paneles de bï¿½squeda (%d)"
         },
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "emptyPanes": "Sin paneles de búsqueda",
-        "loadMessage": "Cargando paneles de búsqueda",
+        "emptyPanes": "Sin paneles de bï¿½squeda",
+        "loadMessage": "Cargando paneles de bï¿½squeda",
         "title": "Filtros Activos - %d"
       },
       "select": {
@@ -258,16 +258,16 @@ function set_dataTables(){        //Aplica datatables. Esta función debe aplicar
           "title": "Eliminar Registro",
           "submit": "Eliminar",
           "confirm": {
-            "_": "¿Está seguro que desea eliminar %d filas?",
-            "1": "¿Está seguro que desea eliminar 1 fila?"
+            "_": "ï¿½Estï¿½ seguro que desea eliminar %d filas?",
+            "1": "ï¿½Estï¿½ seguro que desea eliminar 1 fila?"
           }
         },
         "error": {
-          "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Más información&lt;\\\/a&gt;).<\/a>"
+          "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Mï¿½s informaciï¿½n&lt;\\\/a&gt;).<\/a>"
         },
         "multi": {
-          "title": "Múltiples Valores",
-          "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquí, de lo contrario conservarán sus valores individuales.",
+          "title": "Mï¿½ltiples Valores",
+          "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquï¿½, de lo contrario conservarï¿½n sus valores individuales.",
           "restore": "Deshacer Cambios",
           "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
         }
