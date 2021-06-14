@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Tracking</title>
   <link href="../../imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="../../libs/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">    <!-- Bootstrap4 -->
   <link href="../../libs/DataTables/jquery.dataTables.min.css" rel="stylesheet">                         <!-- Datatables -->

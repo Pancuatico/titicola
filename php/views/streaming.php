@@ -8,18 +8,53 @@
   <link href="../../imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="../../libs/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">    <!-- Bootstrap4 -->
   <link href="../../libs/fa-icons/css/all.min.css" rel="stylesheet">                                      <!-- Icons -->
+  <link href="../../css/commons.css" rel="stylesheet">
   <link href="../../css/streaming.css" rel="stylesheet">
 </head>
 <body>
-<div class="row">
-  <div class="col-12">
-    <button class="btn btn-info" id="btn1">Opci√≥n 1</button><button class="btn btn-success" id="btn2">Opci√≥n 2</button><button class="btn btn-warning" id="btn3">Opci√≥n 3</button>
+
+<img src="../../imgs/fondo1.png" id="bg" alt="background">
+<div class="container mainContainer">
+  <div class="row">
+    <div class="col-12 col-lg-9 colStScreen">
+      <div class="stScreen">
+        
+      </div>
+      <p class="userName">John Doe</p>
+    </div>
+    <div class="col-12 col-lg-3 colStScreen">
+      <div class="stScreen">
+        <div class="adminTools">
+          <div class="toWriteAnAsk">
+            <textarea name="askTxt" id="askTxt" placeholder="Redacta la pregunta"></textarea>
+          </div>
+          <div class="forAlternatives">
+            
+          </div>
+          <div class="toLaunchOrStopAnAsk">
+            <button class="btn btn-light makeAsk">Lanzar pregunta</button>
+            <button class="btn btn-light rmAsk">Quitar pregunta</button>
+          </div>
+        </div>
+      </div>
+      <p class="userName">John Doe</p>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-12">
-    <button class="btn btn-light makeAsk">Lanzar pregunta</button>
-    <button class="btn btn-light rmAsk">Quitar pregunta</button>
+  <div class="row">
+    <div class="col" id="btn1" title="OpciÛn A"><img src="../../imgs/btn1.png" alt=""></div>
+    <div class="col" id="btn2" title="OpciÛn B"><img src="../../imgs/btn1.png" alt=""></div>
+    <div class="col" id="btn3" title="OpciÛn C"><img src="../../imgs/btn1.png" alt=""></div>  OK ACOMODAR ESTAS WEAS PARA QUE SEAN col Y SE VEAN BIEN SEAN CUANTAS SEAN
+    <div class="col" id="btn4" title="OpciÛn D"><img src="../../imgs/btn1.png" alt=""></div>
+  </div>
+  <div class="row rowCamino">
+    <img class="bgCamino" src="../../imgs/camino.png" alt="camino">
+    <div class="hasBtnsCamino">
+      <div class="btnCamino btnCamino1" title="Visitar sitio web de CocaCola"> <img src="../../imgs/btn2.png" alt="img"></div>
+      <div class="btnCamino btnCamino2" title="Visitar sitio web de CCU"> <img src="../../imgs/btn2.png" alt="img"></div>
+      <div class="btnCamino btnCamino3" title="Explorar ofertas de Falabella.cl"> <img src="../../imgs/btn2.png" alt="img"></div>
+      <div class="btnCamino btnCamino4" title="Ir a Disneyland"> <img src="../../imgs/btn2.png" alt="img"></div>
+      <div class="btnCamino btnCamino5" title="Ver ofertas de Paris.cl"> <img src="../../imgs/btn2.png" alt="img"></div>
+    </div>
   </div>
 </div>
 

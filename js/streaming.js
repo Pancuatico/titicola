@@ -4,6 +4,7 @@ $(document).ready(function(){
   $("#btn1").click(function(){registerClick("Opción 1")});
   $("#btn2").click(function(){registerClick("Opción 2")});
   $("#btn3").click(function(){registerClick("Opción 3")});
+  $("#btn4").click(function(){registerClick("Opción 4")});
   $(".makeAsk").click(function(){makeAsk()});
   $(".rmAsk").click(function(){rmAsk()});
   
@@ -18,9 +19,9 @@ streaming.on('value',snap => {
   console.log(snap.val());
   console.log(snap.val()["ask"]);
   if(snap.val()["ask"]==1){
-    $("#btn1,#btn2,#btn3").show();
+    $("#btn1,#btn2,#btn3,#btn4").show();
   }else if(snap.val()["ask"]==0){
-    $("#btn1,#btn2,#btn3").hide();
+    $("#btn1,#btn2,#btn3,#btn4").hide();
   }
 });
 
